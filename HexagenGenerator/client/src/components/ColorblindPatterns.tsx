@@ -1,0 +1,75 @@
+import React from "react";
+
+// This component is used to define SVG patterns for colorblind mode
+const ColorblindPatterns: React.FC = () => {
+  return (
+    <svg width="0" height="0" style={{ position: "absolute" }}>
+      <defs>
+        {/* Red - Lines pattern */}
+        <pattern
+          id="pattern-red"
+          patternUnits="userSpaceOnUse"
+          width="10"
+          height="10"
+          patternTransform="rotate(45)"
+        >
+          <line x1="0" y1="0" x2="0" y2="10" stroke="black" strokeWidth="2" />
+        </pattern>
+
+        {/* Blue - Dots pattern */}
+        <pattern
+          id="pattern-blue"
+          patternUnits="userSpaceOnUse"
+          width="10"
+          height="10"
+        >
+          <circle cx="5" cy="5" r="2" fill="black" />
+        </pattern>
+
+        {/* Yellow - Zigzag pattern */}
+        <pattern
+          id="pattern-yellow"
+          patternUnits="userSpaceOnUse"
+          width="10"
+          height="10"
+        >
+          <path d="M0,0 L5,10 L10,0" stroke="black" strokeWidth="2" fill="none" />
+        </pattern>
+
+        {/* Green - Grid pattern */}
+        <pattern
+          id="pattern-green"
+          patternUnits="userSpaceOnUse"
+          width="10"
+          height="10"
+        >
+          <line x1="0" y1="0" x2="0" y2="10" stroke="black" strokeWidth="1" />
+          <line x1="0" y1="0" x2="10" y2="0" stroke="black" strokeWidth="1" />
+        </pattern>
+
+        {/* Purple - Cross pattern */}
+        <pattern
+          id="pattern-purple"
+          patternUnits="userSpaceOnUse"
+          width="10"
+          height="10"
+        >
+          <line x1="0" y1="5" x2="10" y2="5" stroke="black" strokeWidth="2" />
+          <line x1="5" y1="0" x2="5" y2="10" stroke="black" strokeWidth="2" />
+        </pattern>
+
+        {/* Brown - Waves pattern */}
+        <pattern
+          id="pattern-brown"
+          patternUnits="userSpaceOnUse"
+          width="10"
+          height="10"
+        >
+          <path d="M0,5 C2.5,2.5 7.5,7.5 10,5" stroke="black" strokeWidth="2" fill="none" />
+        </pattern>
+      </defs>
+    </svg>
+  );
+};
+
+export default ColorblindPatterns;
